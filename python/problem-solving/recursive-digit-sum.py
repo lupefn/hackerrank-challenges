@@ -21,17 +21,6 @@ def superDigit(n, k):
     sumMultK = sumDigits * k # multiply by k to get total digits
     # if the length of that multiplication is greater than 1 then we have to keep calling our function recursively
     return sumMultK if len(str(sumMultK)) == 1 else superDigit(str(sumMultK), 1)
-    
-    # original solution
-    # print(n)
-    # print(list(n))
-    # if len(n) == 1:
-    #     print('returning')
-    #     return n
-    # p = n * k
-    # print('p', p)
-    # sumOfPValues = sum(map(int, p))
-    # return superDigit(str(sumOfPValues), 1)
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
